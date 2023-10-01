@@ -1,0 +1,15 @@
+.chart-overview {
+  display: flex;
+  gap: 32px;
+  .right {
+    flex: 4;
+    .report-status {
+      margin-bottom: 24px;
+      display: flex;
+      gap: 32px;
+    }
+  }
+  .left {
+    flex: 3;
+  }
+}

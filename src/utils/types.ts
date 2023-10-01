@@ -13,20 +13,20 @@ export interface total {
 }
 
 export interface ProgramData {
-  active: stages;
+  qualified: stages;
   disqualified: stages;
   total: total;
 
   employers: {
     [key: string]: {
-      active: stages;
-      disqualified: stages;
-      total: total;
+      // qualified: stages;
+      // disqualified: stages;
+      employerTotal: total;
       opportunities: {
         [key: string]: {
-          active: stages;
+          qualified: stages;
           disqualified: stages;
-          total: total;
+          opportunitytotal: total;
         };
       };
     };

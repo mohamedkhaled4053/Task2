@@ -1,6 +1,8 @@
 import { DatePicker } from "antd";
 import "./style.scss";
 import { Icon } from "../Icon/Icon";
+import ChartOverView from "../ChartOverView/ChartOverView";
+import { programData } from "../../utils/mock";
 
 const Main = () => {
   return (
@@ -23,6 +25,8 @@ const Main = () => {
           />
         </div>
       </div>
+
+      <ChartOverView total={programData.total} />
     </div>
   );
 };

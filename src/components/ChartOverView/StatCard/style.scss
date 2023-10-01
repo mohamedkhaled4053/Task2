@@ -1,0 +1,39 @@
+.stat-card {
+  flex: 1;
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  gap: 16px;
+  .stat {
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  .count {
+    font-size: 20px;
+  }
+  .prev-stat {
+    font-size: 12px;
+    p {
+      margin-bottom: 8px;
+    }
+    .prev-count {
+      display: flex;
+      gap: 8px;
+    }
+    .comparison {
+      font-size: 10px;
+      padding: 0 4px;
+      display: flex;
+      gap: 4px;
+      border-radius: 16px;
+      background: #f0f6ff;
+      align-items: center;
+      &.down {
+        background: #fff3f0;
+        svg {
+          transform: scale(1, -1);
+        }
+      }
+    }
+  }
+}
