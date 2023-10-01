@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import StatCard from "./StatCard/StatCard";
 import { total } from "../../utils/types";
+import DataChart from "./DataChart/DataChart";
 
 type Props = {
   total: total;
@@ -20,7 +21,7 @@ const ChartOverView = ({ total }: Props) => {
             />
           ))}
         </div>
-        <div className="card placeholder" style={{ height: "332px" }}></div>
+        <DataChart />
       </div>
       <div className="card left"></div>
     </div>

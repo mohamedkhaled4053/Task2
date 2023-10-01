@@ -236,16 +236,16 @@ export const programData: ProgramData = {
 };
 
 export const chartData = [
-  { month: "January", qualified: 2, disqualified: 4 },
-  { month: "February", qualified: 2, disqualified: 4 },
-  { month: "March", qualified: 2, disqualified: 4 },
-  { month: "April", qualified: 2, disqualified: 4 },
-  { month: "May", qualified: 2, disqualified: 4 },
-  { month: "June", qualified: 2, disqualified: 4 },
-  { month: "July", qualified: 2, disqualified: 4 },
-  // { month: "August", qualified: 2, disqualified: 4 },
-  // { month: "September", qualified: 2, disqualified: 4 },
-  // { month: "October", qualified: 2, disqualified: 4 },
-  // { month: "November", qualified: 2, disqualified: 4 },
-  // { month: "December", qualified: 2, disqualified: 4 },
+  { month: "January", disqualified: 280, qualified: 320 },
+  { month: "February", disqualified: 350, qualified: 710 },
+  { month: "March", disqualified: 300, qualified: 575},
+  { month: "April", disqualified: 350, qualified: 500 },
+  { month: "May", disqualified: 400, qualified: 450 },
+  { month: "June", disqualified: 310, qualified: 350 },
+  { month: "July", disqualified: 500, qualified: 550 },
+  // { month: "August", disqualified: 2, qualified: 4 },
+  // { month: "September", disqualified: 2, qualified: 4 },
+  // { month: "October", disqualified: 2, qualified: 4 },
+  // { month: "November", disqualified: 2, qualified: 4 },
+  // { month: "December", disqualified: 2, qualified: 4 },
 ];

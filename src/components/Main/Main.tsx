@@ -11,11 +11,7 @@ const Main = () => {
         <h1>Opportunity Overview</h1>
         <div className="header-filter">
           <p>London Internship Program</p>
-          <Icon
-            name="arrow"
-            width={18}
-            style={{ transform: "rotate(-90deg)" }}
-          />
+          <Icon name="arrow_down" />
           <span className="line"></span>
           <DatePicker.RangePicker
             suffixIcon={<Icon name="Calendar_Days" />}
