@@ -14,7 +14,7 @@ const Side = () => {
     "File_Document",
     "Notebook",
     "Heart_01",
-    "Chevron_Right_MD",
+    "arrow",
   ];
 
   return (
