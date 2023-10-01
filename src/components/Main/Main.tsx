@@ -22,7 +22,7 @@ const Main = () => {
         </div>
       </div>
 
-      <ChartOverView total={programData.total} />
+      <ChartOverView data={programData} />
     </div>
   );
 };

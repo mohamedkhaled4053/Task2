@@ -3,7 +3,7 @@ import { Icon } from "../../Icon/Icon";
 import "./style.scss";
 
 type Props = {
-  status: "applied" | "offer" | "hired";
+  status: "applied" | "offer" | "hired" | 'recommended' | 'interview';
   newValue: number;
   prevValue: number;
 };
@@ -11,8 +11,10 @@ type Props = {
 const StatCard = ({ newValue, prevValue, status }: Props) => {
   return (
     <div className="card stat-card">
-      <div className="stat">{status}</div>
-      <div className="count">{newValue}</div>
+      <div className="current-stat">
+        <div className="stat">{status}</div>
+        <div className="count">{newValue}</div>
+      </div>
       <div className="prev-stat">
         <p>previous period</p>
         <div className="prev-count">

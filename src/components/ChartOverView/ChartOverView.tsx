@@ -1,29 +1,41 @@
 import React from "react";
 import "./style.scss";
 import StatCard from "./StatCard/StatCard";
-import { total } from "../../utils/types";
-import DataChart from "./DataChart/DataChart";
+import { stages, total } from "../../utils/types";
+import LineChart from "./LineChart/LineChart";
+import Flow from "./Flow/Flow";
 
 type Props = {
-  total: total;
+  data: {} & { qualified: stages; disqualified: stages; total: total };
 };
 
-const ChartOverView = ({ total }: Props) => {
+const ChartOverView = ({ data }: Props) => {
   return (
     <div className="chart-overview">
       <div className="right">
         <div className="report-status">
           {(["applied", "offer", "hired"] as const).map((status) => (
             <StatCard
-              newValue={total.now[status]}
-              prevValue={total.previous[status]}
+              newValue={data.total.now[status]}
+              prevValue={data.total.previous[status]}
               status={status}
             />
           ))}
         </div>
-        <DataChart />
+        <LineChart />
       </div>
-      <div className="card left"></div>
+      <div className=" left">
+        <Flow data={data} />
+        <div className="report-status">
+          {(["recommended", "interview"] as const).map((status) => (
+            <StatCard
+              newValue={data.total.now[status]}
+              prevValue={data.total.previous[status]}
+              status={status}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

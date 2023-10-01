@@ -1,0 +1,64 @@
+.flow {
+  text-transform: capitalize;
+  .flow-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    .header {
+      font-size: 15px;
+    }
+    .total {
+      font-size: 20px;
+    }
+    .flow-bar {
+      font-size: 8px;
+      font-weight: 300;
+      display: flex;
+      padding: 8px 0;
+      gap: 1px;
+      .qualified {
+        .bar {
+          height: 4px;
+          border-radius: 50px 0 0 50px;
+          background: #d0f2ca;
+          margin-bottom: 2px;
+        }
+      }
+      .disqualified {
+        .bar {
+          height: 4px;
+          border-radius: 0 50px 50px 0;
+          background: #ffe0e0;
+        }
+      }
+      .label {
+        color: #c2c2c2;
+      }
+    }
+  }
+
+  .flow-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 12px;
+    .flow-table-head,
+    .flow-table-row {
+      display: flex;
+      justify-content: space-between;
+      align-self: stretch;
+      div {
+        display: flex;
+        gap: 16px;
+      }
+    }
+    .flow-table-head {
+      font-weight: 500;
+    }
+    .flow-table-row {
+      font-weight: 300;
+    }
+  }
+}

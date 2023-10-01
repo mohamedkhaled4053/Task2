@@ -4,12 +4,18 @@
   padding: 24px 32px;
   flex-direction: column;
   gap: 16px;
-  .stat {
-    font-size: 15px;
-    text-transform: capitalize;
-  }
-  .count {
-    font-size: 20px;
+  .current-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 500;
+    .stat {
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+    .count {
+      font-size: 20px;
+    }
   }
   .prev-stat {
     font-size: 12px;
@@ -34,6 +40,17 @@
           transform: scale(1, -1);
         }
       }
+    }
+  }
+}
+
+.left .stat-card {
+  .current-stat {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .count {
+      font-size: 15px;
     }
   }
 }
