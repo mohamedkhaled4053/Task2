@@ -4,6 +4,7 @@ import { ProgramData } from "../../utils/types";
 import { Icon } from "../Icon/Icon";
 import "./style.scss";
 import { stages } from "../../utils/mock";
+import { Tooltip } from "antd";
 
 type Props = {
   employerName: string;
@@ -20,8 +21,12 @@ const Employer = ({ employerName, employerData }: Props) => {
       <div className="employer-header">
         <div className="employer-name">{employerName}</div>
         <div className="employer-icons">
-          <Icon name="Chart_Pie" />
-          <Icon name="File_Download" />
+          <Tooltip title="View Data Charts">
+            <Icon name="Chart_Pie" />
+          </Tooltip>
+          <Tooltip title="CSV Download">
+            <Icon name="File_Download" />
+          </Tooltip>
         </div>
       </div>
       <div className="employer-total">

@@ -1,5 +1,4 @@
 .main {
-  height: 5000px;
   width: 100%;
   background: #f9faff;
   padding: 32px 40px;
@@ -75,6 +74,9 @@
         .sort {
           flex: 1;
         }
+        .sort{
+          height: 100%;
+        }
         .export {
           padding: 8px 16px;
           border-radius: 8px;
@@ -84,6 +86,7 @@
           color: #0557e5;
           font-size: 14px;
           font-weight: 600;
+          cursor: pointer;
         }
       }
     }
