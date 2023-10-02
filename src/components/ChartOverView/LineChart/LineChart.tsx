@@ -53,42 +53,45 @@ const LineChart = () => {
           </p>
         </div>
       </div>
-      <Line
-        options={{
-          responsive: true,
-          plugins: {
-            legend: {
-              display: false,
+      <div className="chart-wrapper">
+        <Line
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false,
+              },
             },
-          },
-          scales: { y: { ticks: { stepSize: 250 } } },
-        }}
-        data={{
-          labels: chartData.map((item) => item.month),
-          datasets: [
-            {
-              label: "Qualified",
-              data: chartData.map((item) => item.qualified),
-              backgroundColor: "rgba(251, 227, 142, 0.7)",
-              borderColor: "#fbe38e",
-              pointBorderWidth: 2,
-              borderWidth: 2,
-              pointRadius: 10,
-              pointHoverRadius: 15,
-            },
-            {
-              label: "Disqualified",
-              data: chartData.map((item) => item.disqualified),
-              backgroundColor: "rgba(154, 137, 255, 0.7)",
-              borderColor: "#b1a5ff",
-              pointBorderWidth: 2,
-              borderWidth: 2,
-              pointRadius: 10,
-              pointHoverRadius: 15,
-            },
-          ],
-        }}
-      />
+            scales: { y: { ticks: { stepSize: 250 } } },
+          }}
+          data={{
+            labels: chartData.map((item) => item.month),
+            datasets: [
+              {
+                label: "Qualified",
+                data: chartData.map((item) => item.qualified),
+                backgroundColor: "rgba(251, 227, 142, 0.7)",
+                borderColor: "#fbe38e",
+                pointBorderWidth: 2,
+                borderWidth: 2,
+                pointRadius: 10,
+                pointHoverRadius: 15,
+              },
+              {
+                label: "Disqualified",
+                data: chartData.map((item) => item.disqualified),
+                backgroundColor: "rgba(154, 137, 255, 0.7)",
+                borderColor: "#b1a5ff",
+                pointBorderWidth: 2,
+                borderWidth: 2,
+                pointRadius: 10,
+                pointHoverRadius: 15,
+              },
+            ],
+          }}
+        />
+      </div>
     </div>
   );
 };
