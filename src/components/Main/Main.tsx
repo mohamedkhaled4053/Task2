@@ -1,4 +1,4 @@
-import { DatePicker } from "antd";
+import { DatePicker, Input, Select } from "antd";
 import "./style.scss";
 import { Icon } from "../Icon/Icon";
 import ChartOverView from "../ChartOverView/ChartOverView";
@@ -23,6 +23,31 @@ const Main = () => {
       </div>
 
       <ChartOverView data={programData} />
+
+      <div className="employers">
+        <h2 className="employers-header">Detailed Opportunity Overview</h2>
+        <div className="filters">
+          <Input className="search" />
+          <div className="filters-end">
+            <Select className="sort">
+              {[
+                "applied",
+                "recommended",
+                "interview",
+                "offer",
+                "hired",
+                "rejected",
+              ].map((status) => (
+                <Select.Option value={status}>{status}</Select.Option>
+              ))}
+            </Select>
+            <button className="export">Export All As CSV</button>
+          </div>
+        </div>
+        {Object.keys(programData.employers).map((employer) => (
+          <div className="employer">{employer}</div>
+        ))}
+      </div>
     </div>
   );
 };
