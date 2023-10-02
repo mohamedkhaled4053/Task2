@@ -38,8 +38,12 @@ const Main = () => {
             <button className="export">Export All As CSV</button>
           </div>
         </div>
-        {Object.keys(programData.employers).map((employer) => (
-          <div className="employer">{employer}</div>
+        {Object.keys(programData.employers).map((employerName) => (
+          <Employer
+            key={employerName}
+            employerName={employerName}
+            employerData={programData.employers[employerName]}
+          />
         ))}
       </div>
     </div>

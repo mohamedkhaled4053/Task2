@@ -67,6 +67,7 @@ export const programData: ProgramData = {
       // },
       opportunities: {
         UXInternship: {
+          label: "UX internship",
           qualified: {
             applied: 20,
             recommended: 17,
@@ -99,6 +100,8 @@ export const programData: ProgramData = {
           },
         },
         ArtInternship: {
+          label: "art internship",
+
           qualified: {
             applied: 44,
             recommended: 32,
@@ -167,6 +170,7 @@ export const programData: ProgramData = {
       // },
       opportunities: {
         UXInternship: {
+          label: "UX internship",
           qualified: {
             applied: 20,
             recommended: 17,
@@ -199,6 +203,7 @@ export const programData: ProgramData = {
           },
         },
         ArtInternship: {
+          label: "Art internship",
           qualified: {
             applied: 20,
             recommended: 17,
