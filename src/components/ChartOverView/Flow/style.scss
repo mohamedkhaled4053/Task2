@@ -1,5 +1,4 @@
 .flow {
-  text-transform: capitalize;
   .flow-top {
     display: flex;
     flex-direction: column;
@@ -52,6 +51,10 @@
       div {
         display: flex;
         gap: 16px;
+        * {
+          width: 80px;
+          text-align: end;
+        }
       }
     }
     .flow-table-head {
