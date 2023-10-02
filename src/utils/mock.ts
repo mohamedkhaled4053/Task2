@@ -35,12 +35,12 @@ export const programData: ProgramData = {
     google: {
       employerTotal: {
         now: {
-          applied: 20,
-          recommended: 20,
-          interview: 4,
-          offer: 3,
-          hired: 3,
-          rejected: 4,
+          applied: 95,
+          recommended: 57,
+          interview: 39,
+          offer: 33,
+          hired: 15,
+          rejected: 60,
         },
         previous: {
           applied: 20,
@@ -135,12 +135,12 @@ export const programData: ProgramData = {
     microsoft: {
       employerTotal: {
         now: {
-          applied: 20,
-          recommended: 20,
-          interview: 4,
-          offer: 3,
-          hired: 3,
-          rejected: 4,
+          applied: 54,
+          recommended: 42,
+          interview: 22,
+          offer: 12,
+          hired: 4,
+          rejected: 19,
         },
         previous: {
           applied: 20,
@@ -249,3 +249,12 @@ export const chartData = [
   // { month: "November", disqualified: 2, qualified: 4 },
   // { month: "December", disqualified: 2, qualified: 4 },
 ];
+
+export const stages = [
+  "applied",
+  "recommended",
+  "interview",
+  "offer",
+  "hired",
+  "rejected",
+] as const;

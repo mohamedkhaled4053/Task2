@@ -1,9 +1,10 @@
 import React from "react";
 import { Icon } from "../../Icon/Icon";
 import "./style.scss";
+import { stages } from "../../../utils/mock";
 
 type Props = {
-  status: "applied" | "offer" | "hired" | 'recommended' | 'interview';
+  status: typeof stages[number];
   newValue: number;
   prevValue: number;
 };

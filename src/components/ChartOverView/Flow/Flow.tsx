@@ -1,9 +1,10 @@
 import React from "react";
-import { stages, total } from "../../../utils/types";
+import { Istages, total } from "../../../utils/types";
 import "./style.scss";
+import { stages } from "../../../utils/mock";
 
 type Props = {
-  data: {} & { qualified: stages; disqualified: stages; total: total };
+  data: {} & { qualified: Istages; disqualified: Istages; total: total };
 };
 
 const Flow = ({ data }: Props) => {
@@ -41,17 +42,18 @@ const Flow = ({ data }: Props) => {
             <p className="disqualified">disqualified</p>
           </div>
         </div>
-        {(
-          ["applied", "recommended", "interview", "offer", "hired"] as const
-        ).map((stage) => (
-          <div className="flow-table-row">
-            <p className="stage">{stage}</p>
-            <div>
-              <p className="qualified">{data.qualified[stage]}</p>
-              <p className="disqualified">{data.disqualified[stage]}</p>
+        {stages.map((stage) => {
+          if (stage === "rejected") return null;
+          return (
+            <div className="flow-table-row">
+              <p className="stage">{stage}</p>
+              <div>
+                <p className="qualified">{data.qualified[stage]}</p>
+                <p className="disqualified">{data.disqualified[stage]}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

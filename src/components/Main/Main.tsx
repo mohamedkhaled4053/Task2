@@ -2,7 +2,8 @@ import { DatePicker, Input, Select } from "antd";
 import "./style.scss";
 import { Icon } from "../Icon/Icon";
 import ChartOverView from "../ChartOverView/ChartOverView";
-import { programData } from "../../utils/mock";
+import { programData, stages } from "../../utils/mock";
+import Employer from "../Employer/Employer";
 
 const Main = () => {
   return (
@@ -30,14 +31,7 @@ const Main = () => {
           <Input className="search" />
           <div className="filters-end">
             <Select className="sort">
-              {[
-                "applied",
-                "recommended",
-                "interview",
-                "offer",
-                "hired",
-                "rejected",
-              ].map((status) => (
+              {stages.map((status) => (
                 <Select.Option value={status}>{status}</Select.Option>
               ))}
             </Select>

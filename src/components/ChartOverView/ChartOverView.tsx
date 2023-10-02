@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.scss";
 import StatCard from "./StatCard/StatCard";
-import { stages, total } from "../../utils/types";
+import { Istages, total } from "../../utils/types";
 import LineChart from "./LineChart/LineChart";
 import Flow from "./Flow/Flow";
 
 type Props = {
-  data: {} & { qualified: stages; disqualified: stages; total: total };
+  data: {} & { qualified: Istages; disqualified: Istages; total: total };
 };
 
 const ChartOverView = ({ data }: Props) => {

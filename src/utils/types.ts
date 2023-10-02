@@ -1,4 +1,4 @@
-export interface stages {
+export interface Istages {
   applied: number;
   recommended: number;
   interview: number;
@@ -8,13 +8,13 @@ export interface stages {
 }
 
 export interface total {
-  now: stages;
-  previous: stages;
+  now: Istages;
+  previous: Istages;
 }
 
 export interface ProgramData {
-  qualified: stages;
-  disqualified: stages;
+  qualified: Istages;
+  disqualified: Istages;
   total: total;
 
   employers: {
@@ -24,8 +24,8 @@ export interface ProgramData {
       employerTotal: total;
       opportunities: {
         [key: string]: {
-          qualified: stages;
-          disqualified: stages;
+          qualified: Istages;
+          disqualified: Istages;
           opportunitytotal: total;
         };
       };
