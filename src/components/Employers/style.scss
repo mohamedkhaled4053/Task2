@@ -22,6 +22,16 @@
       }
       .sort {
         height: 100%;
+        .ant-select-arrow {
+          pointer-events: unset;
+          &::before {
+            content: "";
+            height: 22px;
+            background: #eee;
+            width: 1px;
+            margin-right: 10px;
+          }
+        }
       }
       .export {
         padding: 8px 16px;
