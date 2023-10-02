@@ -83,7 +83,7 @@ export const programData: ProgramData = {
             offer: 1,
             hired: 1,
           },
-          opportunitytotal: {
+          total: {
             now: {
               applied: 27,
               recommended: 21,
@@ -117,7 +117,7 @@ export const programData: ProgramData = {
             offer: 8,
             hired: 3,
           },
-          opportunitytotal: {
+          total: {
             now: {
               applied: 68,
               recommended: 36,
@@ -187,7 +187,7 @@ export const programData: ProgramData = {
             offer: 1,
             hired: 1,
           },
-          opportunitytotal: {
+          total: {
             now: {
               applied: 27,
               recommended: 21,
@@ -220,7 +220,7 @@ export const programData: ProgramData = {
             offer: 1,
             hired: 1,
           },
-          opportunitytotal: {
+          total: {
             now: {
               applied: 27,
               recommended: 21,

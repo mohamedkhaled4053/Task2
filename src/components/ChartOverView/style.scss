@@ -1,21 +1,28 @@
-.chart-overview {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 32px;
-  .right {
-    flex: 4;
+.chart-overview-wrapper {
+  .chart-overview-header {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 31px;
   }
-  .left {
-    flex: 3;
-  }
-  .right,
-  .left {
+  .chart-overview {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    .report-status {
+    gap: 32px;
+    margin-bottom: 32px;
+    .right {
+      flex: 4;
+    }
+    .left {
+      flex: 3;
+    }
+    .right,
+    .left {
       display: flex;
-      gap: 32px;
+      flex-direction: column;
+      gap: 24px;
+      .report-status {
+        display: flex;
+        gap: 32px;
+      }
     }
   }
 }

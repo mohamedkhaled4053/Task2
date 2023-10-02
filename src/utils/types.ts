@@ -28,7 +28,7 @@ export interface ProgramData {
           label: string;
           qualified: Istages;
           disqualified: Istages;
-          opportunitytotal: total;
+          total: total;
         };
       };
     };
