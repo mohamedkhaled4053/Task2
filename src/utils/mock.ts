@@ -33,6 +33,7 @@ export const programData: ProgramData = {
   },
   employers: {
     google: {
+      name: "google",
       employerTotal: {
         now: {
           applied: 95,
@@ -136,6 +137,7 @@ export const programData: ProgramData = {
       },
     },
     microsoft: {
+      name: "microsoft",
       employerTotal: {
         now: {
           applied: 54,

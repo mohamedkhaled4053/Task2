@@ -21,6 +21,7 @@ export interface ProgramData {
     [key: string]: {
       // qualified: stages;
       // disqualified: stages;
+      name:string;
       employerTotal: total;
       opportunities: {
         [key: string]: {

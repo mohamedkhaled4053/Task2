@@ -7,19 +7,19 @@ import { stages } from "../../utils/mock";
 import { Tooltip } from "antd";
 
 type Props = {
-  employerName: string;
-  employerData: ProgramData["employers"][number];
+
+  employer: ProgramData["employers"][string];
 };
 
-const Employer = ({ employerName, employerData }: Props) => {
-  let opportunities = Object.values(employerData.opportunities);
+const Employer = ({ employer }: Props) => {
+  let opportunities = Object.values(employer.opportunities);
 
   const statuses = ["qualified", "disqualified", "opportunitytotal"] as const;
 
   return (
     <div className="card employer">
       <div className="employer-header">
-        <div className="employer-name">{employerName}</div>
+        <div className="employer-name">{employer.name}</div>
         <div className="employer-icons">
           <Tooltip title="View Data Charts">
             <Icon name="Chart_Pie" />
@@ -33,7 +33,7 @@ const Employer = ({ employerName, employerData }: Props) => {
         {stages.map((stage) => (
           <div className="card">
             <div className="stage">{stage}</div>
-            <div className="count">{employerData.employerTotal.now[stage]}</div>
+            <div className="count">{employer.employerTotal.now[stage]}</div>
           </div>
         ))}
       </div>
